@@ -1,0 +1,12 @@
+[
+  {
+    "from": "sarah@company.com",
+    "subject": "Project X Kickoff",
+    "body": "Hi team, Project X aims to expand our product into the European market by Q4 2025. Budget approved: $500K."
+  },
+  {
+    "from": "mike@company.com",
+    "subject": "Project X Update",
+    "body": "Quick update: We hired 3 new engineers for Project X last week. Contact: john@company.com, phone +91-9876543210."
+  }
+]

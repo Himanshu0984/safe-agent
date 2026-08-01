@@ -1,0 +1,15 @@
+[
+  {
+    "ticket": "PX-101",
+    "title": "Market Research",
+    "status": "In Progress",
+    "assignee": "Sarah"
+  },
+  {
+    "ticket": "PX-102",
+    "title": "Hire Regional Manager",
+    "status": "Blocked",
+    "assignee": "Mike",
+    "blocker": "Waiting for HR approval"
+  }
+]
