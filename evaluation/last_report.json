@@ -1,0 +1,68 @@
+{
+  "accuracy": 100.0,
+  "passed": 10,
+  "failed": 0,
+  "avg_latency": 0.2633467197418213,
+  "details": [
+    {
+      "id": 1,
+      "passed": true,
+      "failures": [],
+      "latency": 0.82
+    },
+    {
+      "id": 2,
+      "passed": true,
+      "failures": [],
+      "latency": 0.55
+    },
+    {
+      "id": 3,
+      "passed": true,
+      "failures": [],
+      "latency": 0.35
+    },
+    {
+      "id": 4,
+      "passed": true,
+      "failures": [],
+      "latency": 0.45
+    },
+    {
+      "id": 5,
+      "passed": true,
+      "failures": [],
+      "latency": 0.47
+    },
+    {
+      "id": 6,
+      "passed": true,
+      "failures": [],
+      "latency": 0.0
+    },
+    {
+      "id": 7,
+      "passed": true,
+      "failures": [],
+      "latency": 0.0
+    },
+    {
+      "id": 8,
+      "passed": true,
+      "failures": [],
+      "latency": 0.0
+    },
+    {
+      "id": 9,
+      "passed": true,
+      "failures": [],
+      "latency": 0.0
+    },
+    {
+      "id": 10,
+      "passed": true,
+      "failures": [],
+      "latency": 0.0
+    }
+  ]
+}

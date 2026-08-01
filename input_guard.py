@@ -17,8 +17,11 @@ DANGEROUS_PATTERNS = [
     "act as",
     "pretend to be",
     "disregard",
+    "phone number",      # NEW
+    "email address",     # NEW
+    "'s phone",          # NEW  
+    "'s email",          # NEW
 ]
-
 def keyword_check(user_input):
     """Fast check for obvious attack patterns."""
     lower = user_input.lower()
@@ -33,6 +36,7 @@ def llm_check(user_input):
     """Ask an LLM to judge if the input is malicious."""
     r = client.chat.completions.create(
         model="llama-3.1-8b-instant",
+        temperature=0,  #new line
         messages=[
             {
                 "role": "system",
