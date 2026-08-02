@@ -10,8 +10,11 @@ client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 tracker = CostTracker()
 
 # ===== Load Data =====
-with open("mock_data/gmail.json") as f:
-    gmail = json.load(f)
+# LIVE Gmail API
+from gmail_api import fetch_recent_emails
+print("📡 Fetching live Gmail data...")
+gmail = fetch_recent_emails(max_results=5)
+print(f"✅ Loaded {len(gmail)} Gmail emails\n")
     # ===== LIVE notion API =====
 from notion_api import fetch_notion_data
 print("📡 Fetching live Notion data...")
@@ -80,7 +83,7 @@ def synthesize(question, mini_answers):
     return r.choices[0].message.content
 
 # ===== RUN THE AGENT =====
-big_question = "Summarize Project X including goals, tasks, and blockers"
+big_question = "Summarize my recent emails and highlight any security alerts"
 
 print("🎯 QUESTION:", big_question)
 
