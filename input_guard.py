@@ -20,7 +20,12 @@ DANGEROUS_PATTERNS = [
     "phone number",      # NEW
     "email address",     # NEW
     "'s phone",          # NEW  
-    "'s email",          # NEW
+    "'s email",  
+    "contact details",
+    "contact info",
+    "personal information",
+    "all emails",
+    "all phone",        # NEW
 ]
 def keyword_check(user_input):
     """Fast check for obvious attack patterns."""
@@ -56,7 +61,8 @@ def llm_check(user_input):
 
 # ===== Main Guardrail =====
 def is_safe(user_input):
-    """Returns (True, None) if safe. (False, reason) if unsafe."""
+    if not user_input or not user_input.strip():
+       return False, "Empty input"
     # Layer 1: Fast keyword check
     hit, pattern = keyword_check(user_input)
     if hit:
