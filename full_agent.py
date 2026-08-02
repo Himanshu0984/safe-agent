@@ -12,8 +12,11 @@ tracker = CostTracker()
 # ===== Load Data =====
 with open("mock_data/gmail.json") as f:
     gmail = json.load(f)
-with open("mock_data/notion.json") as f:
-    notion = json.load(f)
+    # ===== LIVE notion API =====
+from notion_api import fetch_notion_data
+print("📡 Fetching live Notion data...")
+notion = fetch_notion_data()
+print(f"✅ Loaded {len(notion)} Notion pages\n")
 with open("mock_data/jira.json") as f:
     jira = json.load(f)
 
