@@ -3,6 +3,7 @@ groq
 python-dotenv
 pandas
 plotly
+numpy<2.0
 presidio-analyzer
 presidio-anonymizer
 spacy
